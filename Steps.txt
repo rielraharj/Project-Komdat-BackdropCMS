@@ -1,0 +1,35 @@
+- sudo apt update
+- sudo apt install ssh
+
+- sudo apt install apache2
+- sudo apt install mysql-server
+- sudo apt install php
+- sudo apt install libapache2-mod-php
+- sudo apt install php-mysql
+- sudo apt install php-dom
+- sudo apt install php-gd
+- sudo apt install php-xml
+- sudo apt install php-mbstring
+#ini yang waktu wordpress (Ga usah ditulis)-> sudo apt install php-gd php-mcrypt php-mbstring php-xml php-ssh2
+- sudo service apache2 restart
+
+# buat database dan user untuk Backdrop
+- mysql -u root -p -v -e "
+	CREATE DATABASE backdrop;
+	CREATE USER backdrop IDENTIFIED BY 'password';
+	GRANT ALL PRIVILEGES ON backdrop.* TO backdrop;"
+
+# download Backdrop
+- wget "https://github.com/backdrop/backdrop/releases/download/1.9.2/backdrop.zip"
+
+# ekstrak ke direktori web
+- sudo apt install zip
+- sudo unzip backdrop.zip -d /var/www/html
+
+# ubah kepemilikan ke user www-data (webserver)
+- sudo chown -R www-data:www-data /var/www/html/backdrop
+
+- Buka webnya : localhost:8888/backdrop
+
+*Lain Lain*
+- Website asli : https://backdropcms.org/
