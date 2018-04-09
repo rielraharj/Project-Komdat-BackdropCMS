@@ -7,12 +7,12 @@
 Aplikasi ini adalah...
 
 
-## Instalasi
+## Prasyarat Instalasi
 
 - Prasyarat, apa saja yang harus diinstal sebelumnya.
 - Langkah instalasi dalam CLI.
 
-### Instalasi LAMP (Linux Apache MySQL PHP)
+## Instalasi LAMP (Linux Apache MySQL PHP)
 ```bash
 # instal SSH
 sudo apt update
@@ -35,7 +35,7 @@ sudo apt install php-mbstring
 sudo service apache2 restart
 
 ```
-###Instalasi aplikasi web Backdrop CMS
+## Instalasi aplikasi web Backdrop CMS
 ```bash
 Membuat Database dan User untuk Backdrop
  mysql -u root -p -v -e "
@@ -57,6 +57,26 @@ Membuat Database dan User untuk Backdrop
 
 Lakukan instalisasi Backdrop CMS di browser dengan address:
 <http://localhost:8888/backdrop>
+
+![Halaman Installasi Awal Backdrop CMS](Installation/1.png)
+Pilih bahasa untuk melanjutkan installasi.
+
+![Halaman Requirement Installasi Backdrop CMS](requirement.png)
+Lalu backdrop akan menampilkan  list requirement installasi jika terdapat point-point yang belum terpenuhi.
+
+![Halaman Konfigurasi Database Backdrop CMS](Installation/2-0.png)
+Masukkan informasi database yang telah dibuat sebelumnya.
+
+![Halaman Installasi Profile Backdrop CMS](Installation/3.png)
+Lalu backdrop akan melakukan proses instalasi modul-modulnya.
+
+![Halaman Konfigurasi informasi Website Backdrop CMS](Installation/4.png)
+Masukkan informasi website dan registrasi user account utama.
+
+![Contoh masukkan konfigurasi website Backdrop CMS](Installation/4-1.png)
+
+![Halaman Website Backdrop CMS](Installation/5.png)
+Jika sudah berhasil maka akan menampilkan website seperti di atas.
 
 ## Konfigurasi (opsional)
 
